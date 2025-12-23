@@ -1,2 +1,23 @@
+server:
+  # Bắt buộc phải có để đọc header X-Forwarded-*
+  forward-headers-strategy: framework
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    # Đổi lại path đơn giản hơn để tránh bị lặp /swagger-ui/swagger-ui
+    path: /swagger-ui.html
+    # Báo cho Swagger biết file config nằm ở đâu (phải có prefix của Gateway)
+    config-url: /shipment-service/v3/api-docs/swagger-config
+
+    # Báo cho Swagger biết file JSON chính nằm ở đâu
+    url: /shipment-service/v3/api-docs
+    disable-swagger-default-url: true
+
+# Biến dùng cho @OpenAPIDefinition
 api-docs:
-  server: http://localhost:8004
+  server: /shipment-service
+  oauth2:
+    authorization-url: http://localhost:8888/user-manager/oauth2/authorize
+    token-url: http://localhost:8888/user-manager/oauth2/token

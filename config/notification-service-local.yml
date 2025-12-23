@@ -1,0 +1,3 @@
+DB_URL: jdbc:mysql://localhost:3306/notification-service?createDatabaseIfNotExist=true
+DB_USER: root
+DB_PASSWORD: root
