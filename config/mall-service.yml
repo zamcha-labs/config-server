@@ -1,6 +1,16 @@
 spring:
-  datasource:
-    url: ${DB_URL}
-    username: ${DB_USER}
-    password: ${DB_PASSWORD}
-    driver-class-name: com.mysql.cj.jdbc.Driver
+  data:
+    redis:
+      host: ${REDIS_HOST}      # Hoặc IP server Redis của bạn
+      port: 6379
+      password: ${REDIS_PASS}        # Để trống nếu không đặt pass
+      database: 0           # Redis mặc định có 16 db (0-15)
+      timeout: 60000ms
+      time-to-live: 3600000 # 1 giờ (Tính bằng mili giây)
+      cache-null-values: false # Không lưu cache nếu dữ liệu null (đỡ rác)
+      lettuce:
+        pool:
+          max-active: 8
+          max-idle: 8
+          min-idle: 0
+          max-wait: -1ms

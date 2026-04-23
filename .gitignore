@@ -28,6 +28,10 @@ target/
 build/
 !**/src/main/**/build/
 !**/src/test/**/build/
-
+**/application-local.yml
+**/mall-service-local.yml
+**/notification-service-local.yml
+**/shipment-service-local.yml
+**/user-manager-local.yml
 ### VS Code ###
 .vscode/

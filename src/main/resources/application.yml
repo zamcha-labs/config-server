@@ -10,6 +10,15 @@ spring:
       server:
         native:
           searchLocations: ${CONFIG_SEARCH_LOCATIONS:file:D:\datn\mobile-mall\config-server\config}
+# Actuator configuration
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: always
 
 ## Actuator configuration
 #management:

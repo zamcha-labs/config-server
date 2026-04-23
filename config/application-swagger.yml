@@ -1,0 +1,16 @@
+server:
+  # Cấu hình để Spring nhận diện đúng các header X-Forwarded-* từ Gateway (8888)
+  forward-headers-strategy: framework
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    config-url: /${SERVICE_NAME}/v3/api-docs/swagger-config
+    url: /${SERVICE_NAME}/v3/api-docs
+    disable-swagger-default-url: true
+api-docs:
+  server: /${SERVICE_NAME}
+  oauth2:
+    authorization-url: ${OAUTH2_AUTHORIZATION_URI}
+    token-url: ${OAUTH2_TOKEN_URI}
