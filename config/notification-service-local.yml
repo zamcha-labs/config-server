@@ -1,8 +1,8 @@
-DB_URL: jdbc:mysql://localhost:3306/notification-service?useSSL=false&allowPublicKeyRetrieval=true
-DB_USER: root
-DB_PASSWORD: root
+DB_URL: 
+DB_USER: 
+DB_PASSWORD: 
 
 SERVICE_NAME: notification-service
 
-MAIL_USERNAME: caotran293@gmail.com
-MAIL_PASSWORD: rygclrhxlmtpuoar
+MAIL_USERNAME: 
+MAIL_PASSWORD: 
